@@ -1,0 +1,89 @@
+﻿<phone:PhoneApplicationPage 
+    x:Class="PBTrainer.About"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:controls="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    mc:Ignorable="d" d:DesignWidth="480" d:DesignHeight="768"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait"  Orientation="Portrait"
+    shell:SystemTray.IsVisible="True">
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <!--Pivot Control-->
+        <controls:Pivot Title="PAINTBALL TRAINER">
+            <!--Pivot item one-->
+            <controls:PivotItem Header="About">
+                <StackPanel>
+                    
+                    <StackPanel Orientation="Horizontal" Margin="12,0,0,0">
+                        <TextBlock Margin="0,0,0,0" Foreground="{StaticResource PhoneAccentBrush}" Style="{StaticResource PhoneTextLargeStyle}">PB Trainer</TextBlock>
+                        <TextBlock Margin="12,13,6,0" Style="{StaticResource PhoneTextNormalStyle}" Text="Version:" />
+                        <TextBlock Margin="0,13,12,0" Style="{StaticResource PhoneTextNormalStyle}" x:Name="_versionText" />
+                    </StackPanel>
+
+                    <TextBlock Style="{StaticResource PhoneTextNormalStyle}">by Andy March</TextBlock>
+                    <HyperlinkButton
+                    NavigateUri="www.pbtrainer.andymarch.co.uk/"
+                    TargetName="_new"
+                    HorizontalAlignment="Left"
+                    Content="www.pbtrainer.andymarch.co.uk"
+                    />
+                    
+                    <TextBlock Margin="12,12,0,12"/>
+
+                    <TextBlock Margin="12,0,0,12" Foreground="{StaticResource PhoneAccentBrush}" Style="{StaticResource PhoneTextNormalStyle}" MouseLeftButtonUp="ReviewApp">Review PBTrainer.</TextBlock>
+                    <TextBlock Margin="12,0,0,12" Foreground="{StaticResource PhoneAccentBrush}" Style="{StaticResource PhoneTextNormalStyle}" MouseLeftButtonUp="SendFeedback">Send feedback: pbtrainer@andymarch.co.uk.</TextBlock>
+                    
+                    <TextBlock Margin="12,12,0,12"/>
+
+                    <TextBlock Style="{StaticResource PhoneTextNormalStyle}">Background image courtesy of Ray Ko.</TextBlock>
+                    <HyperlinkButton
+                    NavigateUri="www.PaintballPictures.co.uk/"
+                    TargetName="_new"
+                    HorizontalAlignment="Left"
+                    Content="www.PaintballPictures.co.uk"
+                    />
+                    
+                    
+
+                    
+                    
+                </StackPanel>
+            </controls:PivotItem>
+
+            <!--Pivot item two-->
+            <controls:PivotItem Header="What's new?">
+                <ScrollViewer>
+                    <StackPanel>
+                        <TextBlock Foreground="{StaticResource PhoneAccentBrush}" Style="{StaticResource PhoneTextLargeStyle}">What's new in 1.2?</TextBlock>
+                        <TextBlock Style="{StaticResource PhoneTextNormalStyle}" TextWrapping="Wrap">Infinite drill sessions, fixed zero duration bug, improved about page</TextBlock>
+                        <TextBlock Foreground="{StaticResource PhoneAccentBrush}" Style="{StaticResource PhoneTextLargeStyle}">What's new in 1.1?</TextBlock>
+                        <TextBlock Style="{StaticResource PhoneTextNormalStyle}" TextWrapping="Wrap">Logic bug fixes, better tombstone handling ,new loading page</TextBlock>
+                        <TextBlock Foreground="{StaticResource PhoneAccentBrush}" Style="{StaticResource PhoneTextLargeStyle}">What's new in 1.0?</TextBlock>
+                        <TextBlock Style="{StaticResource PhoneTextNormalStyle}">Everything!</TextBlock>
+                    </StackPanel>
+                </ScrollViewer>
+            </controls:PivotItem>
+        </controls:Pivot>
+    </Grid>
+
+    <!--Sample code showing usage of ApplicationBar-->
+    <!--<phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True">
+            <shell:ApplicationBarIconButton x:Name="appbar_button1" IconUri="/Images/appbar_button1.png" Text="Button 1"/>
+            <shell:ApplicationBarIconButton x:Name="appbar_button2" IconUri="/Images/appbar_button2.png" Text="Button 2"/>
+            <shell:ApplicationBar.MenuItems>
+                <shell:ApplicationBarMenuItem x:Name="menuItem1" Text="MenuItem 1"/>
+                <shell:ApplicationBarMenuItem x:Name="menuItem2" Text="MenuItem 2"/>
+            </shell:ApplicationBar.MenuItems>
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>-->
+    
+</phone:PhoneApplicationPage>
